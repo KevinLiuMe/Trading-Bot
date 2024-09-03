@@ -11,7 +11,6 @@ def append_line_to_csv(source_name, target_name, line_number):
             reader = csv.reader(src)
             writer = csv.writer(tgt)
 
-            # Skip lines until we reach the desired one
             for current_line, row in enumerate(reader, start=1):
                 if current_line == line_number:
                     writer.writerow(row)
